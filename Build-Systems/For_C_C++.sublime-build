@@ -1,0 +1,5 @@
+{
+  "cmd": ["g++", "-Wall", "-time", "$file", "-o", "$file_base_name", "&&", "start","cmd", "/K" , "$file_base_name"],
+  "selector": "source.c,source.cpp",
+  "shell": true
+}
