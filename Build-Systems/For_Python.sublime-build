@@ -1,6 +1,21 @@
+1.
+//for this build system to work,first we need to install the plugin named "Console Exec".
 {
     "cmd": ["python", "-u", "$file"],
     "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
     "selector": "source.python",
     "target": "console_exec"
 }
+
+2.
+//For shell. We need to install "SublimeREPL" for this build-system to work. 
+Steps:
+  (i) Select Preferences -> Browse Packages -> SublimeREPL -> config -> Python. 
+  (ii) There you will see a file named "Menu". Open the file with sublime-text. One the 39th line just add "-i" in the line as below:
+        "cmd": ["python", "-i", "-u", "-m", "pdb", "$file_basename"]
+  (iii) Save the file and add a new build-system as follows:
+       {
+           "target": "run_existing_window_command", 
+           "id": "repl_python_run",
+           "file": "config/Python/Main.sublime-menu"
+       }
