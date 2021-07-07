@@ -1,5 +1,14 @@
+1.
 {
   "cmd": ["g++","-std=c++17", "-Wall", "-time", "$file", "-o", "$file_base_name", "&&", "start","cmd", "/K" , "$file_base_name"],
   "selector": "source.c,source.c++",
   "shell": true
 }
+
+2.
+{
+  "cmd": ["g++","-std=c++17", "-Wall", "-time", "$file", "-o", "$file_base_name", "&&" , "$file_base_name"],
+  "selector": "source.c,source.c++",
+  "target" : "console_exec"
+}
+
