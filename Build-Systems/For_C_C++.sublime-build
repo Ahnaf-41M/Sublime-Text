@@ -6,6 +6,7 @@
 }
 
 2.
+//for this build system to work,first we need to install the plugin named "Console Exec".
 {
   "cmd": ["g++","-std=c++17", "-Wall", "-time", "$file", "-o", "$file_base_name", "&&" , "$file_base_name"],
   "selector": "source.c,source.c++",
