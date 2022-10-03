@@ -4,7 +4,6 @@
   "selector": "source.c,source.c++",
   "shell": true
 }
-
 2.
 //for this build system to work,first we need to install the plugin named "Console Exec".
 {
